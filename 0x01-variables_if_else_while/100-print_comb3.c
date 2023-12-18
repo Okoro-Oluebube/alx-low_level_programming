@@ -22,6 +22,7 @@ int main(void)
 				putchar('0' + x);
 				if (n < 8)
 				putchar(',');
+				if (n <= 8)
 				putchar(' ');
 			}
 		}
