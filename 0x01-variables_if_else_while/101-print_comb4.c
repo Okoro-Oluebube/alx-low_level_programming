@@ -22,8 +22,8 @@ int main(void)
 					putchar('0' + y);
 					putchar('0' + z);
 					if (y < 8)
-						putchar(',');
-						putchar(' ');
+					putchar(',');
+					putchar(' ');
 				}
 		}
 	}
