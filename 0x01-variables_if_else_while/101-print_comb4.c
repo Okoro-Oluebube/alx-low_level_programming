@@ -23,6 +23,7 @@ int main(void)
 					putchar('0' + z);
 					if ((x <= 9 && y < 8) || x < 7)
 					putchar(',');
+					if (x < 7)
 					putchar(' ');
 				}
 		}
