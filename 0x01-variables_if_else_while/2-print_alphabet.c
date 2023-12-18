@@ -1,4 +1,4 @@
-#include <stdio>
+#include <stdio.h>
 /**
  * main --printing alphabets with putchat
  * Return: always return 0
