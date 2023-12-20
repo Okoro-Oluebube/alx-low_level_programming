@@ -1,5 +1,5 @@
 #include <stdio.h>
-void char print () 
+char print () 
 {
 	printf("_putchar");
 }
