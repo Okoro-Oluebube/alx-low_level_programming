@@ -3,10 +3,9 @@
  * mul --multiplication of two integers
  * @a: function parameter
  * @b: function parameter
- * Return: 0
+ * Return: void
  */
 int mul(int a, int b)
 {
-	printf("%d", a * b);
-	return (0);
+	return (a * b);
 }
