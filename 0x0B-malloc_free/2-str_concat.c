@@ -13,19 +13,22 @@ char *str_concat(char *s1, char *s2)
 
 	i = strlen(s1);
 	j = strlen(s2);
-	k = (i + j) - 1;
+	k = (i + j) + 1;
 	s = (char *) malloc(k * sizeof(char));
 	if (s == NULL)
 	{
 		return (NULL);
 	}
-	for (l = 0; l <= i; l++)
+	else
 	{
-		s[l] = s1[l];
+		for (l = 0; l <= i; l++)
+		{
+			s[l] = s1[l];
+		}
+		for (m = 0; m <= j; m++)
+		{
+			s[i + m] = s2[m];
+		}
+		return (s);
 	}
-	for (m = 0; m <= j; m++)
-	{
-		s[i + m] = s2[m];
-	}
-	return (s);
 }
