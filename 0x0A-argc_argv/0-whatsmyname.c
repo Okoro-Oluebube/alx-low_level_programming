@@ -8,7 +8,6 @@
  */
 int main(int x, char *s[])
 {
-	x = x - 1;
-	printf("%s\n", s[x]);
-	return (*s[x]);
+	printf("%s\n", s[x - 1]);
+	return (*s[x - 1]);
 }
