@@ -1,6 +1,5 @@
 #include "dog.h"
 /**
- * main --main body.
  * init_dog --intializing struct dog variables.
  * @d: pointer variable
  * @name: fxn member.
