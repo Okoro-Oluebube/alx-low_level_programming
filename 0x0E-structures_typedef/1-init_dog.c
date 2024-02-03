@@ -1,3 +1,4 @@
+#include "dog.h"
 /**
  * main --main body.
  * init_dog --intializing struct dog variables.
@@ -8,13 +9,7 @@
  */
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
-	char *name;
-	float age;
-	char *owner;
-}
-int main(void)
-{
-	(*d).name = *name;
-	(*d).age = age;
-	(*d).owner = *owner;
+		d->name = name;
+		(*d).age = age;
+		(*d).owner = owner;
 }
