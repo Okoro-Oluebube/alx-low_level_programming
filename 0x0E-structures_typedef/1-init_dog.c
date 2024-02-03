@@ -1,4 +1,5 @@
 #include "dog.h"
+
 /**
  * init_dog --intializing struct dog variables.
  * @d: pointer variable
