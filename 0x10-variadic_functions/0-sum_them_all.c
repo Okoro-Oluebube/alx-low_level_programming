@@ -17,6 +17,7 @@ int sum_them_all(const unsigned int n, ...)
 	else
 	{
 		va_list var;
+
 		va_start(var, n);
 		for (i = 0; i < n; i++)
 		{
