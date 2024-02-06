@@ -7,14 +7,11 @@
 size_t list_len(const list_t *h)
 {
 	int len;
-	list_t *p, *n;
 
 	len = 0;
-	h = p = n;
-	while (n != '\0')
+	while (h != NULL)
 	{
-		p->next = n;
-		n = p;
+		h = (*h).next;
 		len++;
 	}
 	return (len);
