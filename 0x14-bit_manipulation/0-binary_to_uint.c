@@ -21,7 +21,7 @@ unsigned int binary_to_uint(const char *b)
 	{
 		for (j = (i - 1); j >= 0; j--)
 		{
-			if ((s[j] < 48) || (s[j] > 49))
+			if ((s[j] < 48) || (s[j] > 49) || (s == NULL))
 			{
 				return (0);
 			}
