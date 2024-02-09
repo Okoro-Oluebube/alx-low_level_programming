@@ -8,8 +8,7 @@
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
 	unsigned int bitMask = 1;
-	unsigned int i;
-       	unsigned long int num;
+	unsigned long int i, num;
 
 	i = n ^ m;
 	num = 0;
