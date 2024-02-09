@@ -30,8 +30,4 @@ unsigned int binary_to_uint(const char *b)
 		binval *= 2;
 	}
 	return (dec);
-	else
-	{ 
-		return (0);
-	}
 }
