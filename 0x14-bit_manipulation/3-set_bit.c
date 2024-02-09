@@ -3,6 +3,7 @@
  * set_bit --Sets a given bit ti 1.
  * @n: Pointer to the int containing the bit.
  * @index: Index of the bit.
+ * Return: Integer.
  */
 int set_bit(unsigned long int *n, unsigned int index)
 {
