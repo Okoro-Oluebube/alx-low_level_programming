@@ -10,12 +10,17 @@ int get_bit(unsigned long int n, unsigned int index)
 	unsigned int bitMask = 1;
 
 	bitMask <<= index;
-	if (n & bitMask)
+	if (index < sizeof(n) * 8)
 	{
-		return (1);
+		if (n & bitMask)
+		{
+			return (1);
+		}
+		else
+		{
+			return (0);
+		}
 	}
 	else
-	{
-		return (0);
-	}
+		return (-1);
 }
