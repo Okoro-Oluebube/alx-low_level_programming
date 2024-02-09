@@ -13,24 +13,17 @@ unsigned int binary_to_uint(const char *b)
 	dec = 0;
 	i = strlen(s);
 	binval = 1;
-	if (b == NULL)
+	for (j = (i - 1); j >= 0; j--)
 	{
-		return (0);
-	}
-	else
-	{
-		for (j = (i - 1); j >= 0; j--)
+		if ((s[j] < 48) || (s[j] > 49) || (s == NULL))
 		{
-			if ((s[j] < 48) || (s[j] > 49))
-			{
-				return (0);
-			}
-			else if (s[j] == '1')
-			{
-				dec += binval;
-			}
-			binval *= 2;
+			return (0);
 		}
+		else if (s[j] == '1')
+		{
+			dec += binval;
+		}
+		binval *= 2;
 	}
 	return (dec);
 }
