@@ -13,7 +13,7 @@ unsigned int binary_to_uint(const char *b)
 	dec = 0;
 	i = strlen(s);
 	binval = 1;
-	if (s == NULL)
+	if (*s == NULL)
 	{
 		return (0);
 	}
@@ -21,7 +21,7 @@ unsigned int binary_to_uint(const char *b)
 	{
 		for (j = (i - 1); j >= 0; j--)
 		{
-			if ((s[j] < 48) || (s[j] > 49) || (s == NULL))
+			if ((s[j] < 48) || (s[j] > 49))
 			{
 				return (0);
 			}
