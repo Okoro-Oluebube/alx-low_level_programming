@@ -20,11 +20,11 @@ int create_file(const char *filename, char *text_content)
 	}
 	if (text_content == NULL)
 	{
-		fd = open(filename, O_CREAT | O_WRONLY, 600);
+		fd = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
 	}
 	if (!filename)
 	{
-		fd = open(filename, O_CREAT | O_WRONLY, 600);
+		fd = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
 		nwr = write(fd, text_content, strlen(text_content));
 	}
 	if (fd == -1 || nwr == -1)
