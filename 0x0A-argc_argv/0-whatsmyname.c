@@ -9,5 +9,5 @@
 int main(int x, char *s[])
 {
 	printf("%s\n", s[x - 1]);
-	return (*s[x - 1]);
+	return (0);
 }

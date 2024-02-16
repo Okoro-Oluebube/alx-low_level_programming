@@ -1,3 +1,4 @@
+#include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
 #include <ctype.h>
@@ -9,33 +10,36 @@
  */
 int main(int x, char *s[])
 {
-	int a, c, sum;
+	int a, b, sum;
 
 	sum = 0;
-	if (x < 1)
+	for (a = 0; a < x; a++)
 	{
-		return;
-	}
-	else
-	{
-		for (c = 0; c < x; c++)
+		if (isalpha(s[a]))
 		{
-			char *str[];
+			printf("0\n");
+		}
+	}
+	for (b = 1; *s[b] != '\0'; b++)
+	{
+		char *str;
+		int i;
 
-			str = s[c];
-			for (a = 0; *str[a] != '\0'; a++)
+		str = s[b];
+		for (i = 1; str[i] != '\0'; i++)
+		{
+			if (str[i] < 48 || str[i] > 57)
 			{
-				if (*str[a] < '48' || *str[a] > '57')
-				{
-					printf("Error\n");
-					return (1);
-				}
-				else
-				{
-					sum += atoi(*str[c]);
-				}
+				printf("Error\n");
+				return (1);
+			}
+			else
+			{
+				sum += atoi(str[i]);
+				return (sum);
 			}
 			printf("%d\n", sum);
 		}
 	}
+	return (sum);
 }
