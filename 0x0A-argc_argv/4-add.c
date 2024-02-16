@@ -10,36 +10,34 @@
  */
 int main(int x, char *s[])
 {
-	int a, b, sum;
+	int a, b, c, sum;
+	char *str;
 
 	sum = 0;
-	for (a = 0; a < x; a++)
+	if (x <= 1)
 	{
-		if (isalpha(s[a]))
+		for (a= 0; a < x; a++)
 		{
 			printf("0\n");
 		}
 	}
-	for (b = 1; *s[b] != '\0'; b++)
+	while (s)
 	{
-		char *str;
-		int i;
-
-		str = s[b];
-		for (i = 1; str[i] != '\0'; i++)
+		for (b = 1; *s[b] != '\0'; b++)
 		{
-			if (str[i] < 48 || str[i] > 57)
+			if (*s[b] < 48 || *s[b] > 57)
 			{
 				printf("Error\n");
 				return (1);
 			}
-			else
-			{
-				sum += atoi(str[i]);
-				return (sum);
-			}
-			printf("%d\n", sum);
 		}
+		for (b = 1; *s[b] != '\0'; b++)
+		{
+			str = s[b];
+			c = atoi(str);
+			sum += c;
+		}
+		printf("%d\n", sum);
 	}
 	return (sum);
 }
